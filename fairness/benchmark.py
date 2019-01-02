@@ -1,7 +1,9 @@
 import fire
 import os
-import statistics
+import os.path as path
 import sys
+
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 
 from fairness.data.objects.list import DATASETS, get_dataset_names
 from fairness.data.objects.ProcessedData import ProcessedData
