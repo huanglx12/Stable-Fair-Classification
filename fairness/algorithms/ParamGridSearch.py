@@ -51,14 +51,16 @@ class ParamGridSearch(Algorithm):
         best_val = None
         best = None
         best_name = None
+        best_param_val = None
         for param_name, param_val, predictions in all_predictions:
              val = self.metric.calc(actual, predictions, dict_sensitive, single_sensitive,
                                     privileged_vals, positive_class_val)
              if best_val == None or self.metric.is_better_than(val, best_val):
                   best = predictions
+                  best_val = val
                   best_name = param_name
-                  best_val = param_val
-        self.reset_params(best_name, best_val, params)
+                  best_param_val = param_val
+        self.reset_params(best_name, best_param_val, params)
         return best
 
     def reset_params(self, param_name, param_val, param_dict):
