@@ -14,7 +14,8 @@ np.random.seed(SEED)
 
 
 
-def train_model(x, y, x_control, loss_function, apply_fairness_constraints, apply_accuracy_constraint, sep_constraint, sensitive_attrs, sensitive_attrs_to_cov_thresh, gamma=None):
+def train_model(x, y, x_control, loss_function, apply_fairness_constraints, apply_accuracy_constraint, sep_constraint,
+                sensitive_attrs, sensitive_attrs_to_cov_thresh, gamma=None, lam=None, is_reg=0):
 
     """
 
@@ -58,9 +59,14 @@ def train_model(x, y, x_control, loss_function, apply_fairness_constraints, appl
     else:
         constraints = get_constraint_list_cov(x, y, x_control, sensitive_attrs, sensitive_attrs_to_cov_thresh)      
 
+    if is_reg == 1:
+        f_args = (x, y, lam)
+    else:
+        f_args = (x, y)
+
     if apply_accuracy_constraint == 0: #its not the reverse problem, just train w with cross cov constraints
 
-        f_args=(x, y)
+        # f_args=(x, y)
         w = minimize(fun = loss_function,
             x0 = np.random.rand(x.shape[1],),
             args = f_args,
@@ -74,7 +80,7 @@ def train_model(x, y, x_control, loss_function, apply_fairness_constraints, appl
         # train on just the loss function
         w = minimize(fun = loss_function,
             x0 = np.random.rand(x.shape[1],),
-            args = (x, y),
+            args = f_args,
             method = 'SLSQP',
             options = {"maxiter":max_iter},
             constraints = []
@@ -86,7 +92,11 @@ def train_model(x, y, x_control, loss_function, apply_fairness_constraints, appl
         def constraint_gamma_all(w, x, y,  initial_loss_arr):
             
             gamma_arr = np.ones_like(y) * gamma # set gamma for everyone
-            new_loss = loss_function(w, x, y)
+            # new_loss = loss_function(w, x, y)
+            if is_reg == 1:
+                new_loss = loss_function(w, x, y, lam)
+            else:
+                new_loss = loss_function(w, x, y)
             old_loss = sum(initial_loss_arr)
             return ((1.0 + gamma) * old_loss) - new_loss
 
@@ -94,12 +104,20 @@ def train_model(x, y, x_control, loss_function, apply_fairness_constraints, appl
             return np.dot(w, x.T) # if this is positive, the constraint is satisfied
         def constraint_unprotected_people(w,ind,old_loss,x,y):
             
-            new_loss = loss_function(w, np.array([x]), np.array(y))
+            # new_loss = loss_function(w, np.array([x]), np.array(y))
+            if is_reg == 1:
+                new_loss = loss_function(w, np.array([x]), np.array(y), lam)
+            else:
+                new_loss = loss_function(w, np.array([x]), np.array(y))
             return ((1.0 + gamma) * old_loss) - new_loss
 
         constraints = []
         predicted_labels = np.sign(np.dot(w.x, x.T))
-        unconstrained_loss_arr = loss_function(w.x, x, y, return_arr=True)
+        # unconstrained_loss_arr = loss_function(w.x, x, y, return_arr=True)
+        if is_reg == 1:
+            unconstrained_loss_arr = loss_function(w.x, x, y, lam)
+        else:
+            unconstrained_loss_arr = loss_function(w.x, x, y, return_arr=True)
 
         if sep_constraint == True: # separate gemma for different people
             for i in range(0, len(predicted_labels)):

@@ -111,16 +111,16 @@ class ZafarAlgorithmFairness(ZafarAlgorithmBase):
         
     # take 10 logarithmic steps for gamma between 0.1 and 1.0
     def get_param_info(self):
-        return {'c': list(numpy.exp(numpy.linspace(numpy.log(0.001), numpy.log(1), 10)))}
+        return {'lam': list(numpy.exp(numpy.linspace(numpy.log(1), numpy.log(10000), 10)))}
 
     def get_default_params(self):
-        return {'c': 0.001}
+        return {'lam': 1}
 
     def create_command_line(self, train_name, test_name, predictions_name, params):
         return ['python3', 'main.py',
                 train_name,
                 test_name,
                 predictions_name,
-                'c',
-                str(params['c'])]
+                'lam',
+                str(params['lam'])]
 

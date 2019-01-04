@@ -6,7 +6,7 @@ import loss_funcs as lf # loss funcs that can be optimized subject to various co
 import json
 
 def train_classifier(x, y, control, sensitive_attrs, mode, sensitive_attrs_to_cov_thresh):
-    loss_function = lf._logistic_loss
+    loss_function = lf._logistic_loss_l2_reg
     w = ut.train_model(
         x, y, control, loss_function,
         mode.get('fairness', 0),
@@ -14,7 +14,10 @@ def train_classifier(x, y, control, sensitive_attrs, mode, sensitive_attrs_to_co
         mode.get('separation', 0),
         sensitive_attrs,
         sensitive_attrs_to_cov_thresh,
-        mode.get('gamma', None))
+        mode.get('gamma', None),
+        mode.get('lam', None),
+        mode.get('is_reg', 0)
+    )
     return w
 
 def get_accuracy(y, Y_predicted):
@@ -62,6 +65,8 @@ def main(train_file, test_file, output_file, setting, value):
         mode = {"accuracy": 1, "gamma": float(value)}
     elif setting == 'c':
         mode = {"fairness": 1}
+    elif setting == 'lam':
+        mode = {"fairness": 1, "lam": float(value), 'is_reg': 1}
     elif setting == 'baseline':
         mode = {}
     else:
@@ -71,6 +76,8 @@ def main(train_file, test_file, output_file, setting, value):
     if setting == 'c':
         thresh = dict((k, float(value)) for (k, v) in x_control_train.items())
         # print("Covariance threshold: %s" % thresh)
+    if setting == 'lam':
+        thresh = dict((k, float(0.1)) for (k, v) in x_control_train.items())
 
     # print("Will train classifier on %s %s-d points" % x_train.shape, file=sys.stderr)
     # print("Sensitive attribute: %s" % (x_control_train.keys(),), file=sys.stderr)
