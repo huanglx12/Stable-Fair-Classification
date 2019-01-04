@@ -37,7 +37,8 @@ def run(num_trials = NUM_TRIALS_DEFAULT, dataset = get_dataset_names(),
         print("\nEvaluating dataset:" + dataset_obj.get_dataset_name())
 
         processed_dataset = ProcessedData(dataset_obj)
-        train_test_splits = processed_dataset.create_train_test_splits(num_trials)
+        # train_test_splits = processed_dataset.create_train_test_splits(num_trials)
+        train_test_splits, extra_tests = processed_dataset.create_train_test_splits_and_extra_tests(num_trials)
 
         all_sensitive_attributes = dataset_obj.get_sensitive_attributes_with_joint()
         for sensitive in all_sensitive_attributes:
@@ -68,9 +69,10 @@ def run(num_trials = NUM_TRIALS_DEFAULT, dataset = get_dataset_names(),
                 for i in range(0, num_trials):
                     for supported_tag in algorithm.get_supported_data_types():
                         train, test = train_test_splits[supported_tag][i]
+                        extra_test = extra_tests[supported_tag]
                         try:
                             params, results, param_results, param_val_metric =  \
-                                run_eval_alg(algorithm, train, test, dataset_obj, processed_dataset,
+                                run_eval_alg(algorithm, train, extra_test, dataset_obj, processed_dataset,
                                              all_sensitive_attributes, sensitive, supported_tag)
                             for tp_param_val, tp_metric in param_val_metric.items():
                                 param_val_metrics[tp_param_val] += [tp_metric]
