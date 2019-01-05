@@ -65,14 +65,22 @@ def run(num_trials = NUM_TRIALS_DEFAULT, dataset = get_dataset_names(),
                                      dataset_obj, processed_dataset.get_sensitive_values(k), k))
                           for k in train_test_splits.keys())
 
+                param_10_predictions = defaultdict(dict)
                 for i in range(0, num_trials):
                     for supported_tag in algorithm.get_supported_data_types():
                         train, test = train_test_splits[supported_tag][i]
                         extra_test = extra_tests[supported_tag]
                         try:
-                            params, results, param_results =  \
+                            params, results, param_results, param_predictions =  \
                                 run_eval_alg(algorithm, train, extra_test, dataset_obj, processed_dataset,
                                              all_sensitive_attributes, sensitive, supported_tag)
+
+                            if supported_tag not in param_10_predictions:
+                                param_10_predictions[supported_tag] = {}
+                            for param_val, predictions in param_predictions.items():
+                                if param_val not in param_10_predictions[supported_tag]:
+                                    param_10_predictions[supported_tag][param_val] = []
+                                param_10_predictions[supported_tag][param_val] += [predictions]
                         except Exception as e:
                             import traceback
                             traceback.print_exc(file=sys.stderr)
@@ -85,12 +93,35 @@ def run(num_trials = NUM_TRIALS_DEFAULT, dataset = get_dataset_names(),
                                     write_alg_results(param_files[supported_tag],
                                                       algorithm.get_name(), params, i, results)
 
+                write_own_metric(dataset_obj, algorithm, param_10_predictions)
+
             print("Results written to:")
             for supported_tag in algorithm.get_supported_data_types():
                 print("    " + dataset_obj.get_results_filename(sensitive, supported_tag))
 
             for detailed_file in detailed_files.values():
                 detailed_file.close()
+
+def write_own_metric(dataset_obj, alg, param_10_predictions):
+    for supported_tag, param_predictions in param_10_predictions.items():
+        filename = 'own-metric_' + dataset_obj.get_dataset_name() + '_' + alg.get_name() + '_' + supported_tag + '.csv'
+        f_out = open(filename, 'w')
+        print('params', 'own_metric', sep='\t', file=f_out)
+        for param_val, predictions in param_predictions.items():
+            diff_nums = compute_diff_nums(predictions)
+            print(param_val, diff_nums, sep='\t', file=f_out)
+        f_out.close()
+
+def compute_diff_nums(predictions):
+    diff_nums = 0
+    for i in range(len(predictions) - 1):
+        prediction1 = predictions[i]
+        for j in range(i+1, len(predictions)):
+            prediction2 = predictions[j]
+            for idx in range(len(prediction1)):
+                if prediction1[idx] != prediction2[idx]:
+                    diff_nums += 1
+    return diff_nums
 
 def write_alg_results(file_handle, alg_name, params, run_id, results_list):
     line = alg_name + ','
@@ -132,6 +163,7 @@ def run_eval_alg(algorithm, train, test, dataset, processed_data, all_sensitive_
 
     # handling the set of predictions returned by ParamGridSearch
     results_lol = []
+    param_predictions = {}
     if len(predictions_list) > 0:
         for param_name, param_val, predictions in predictions_list:
             params_dict = { param_name : param_val }
@@ -141,7 +173,8 @@ def run_eval_alg(algorithm, train, test, dataset, processed_data, all_sensitive_
                                      privileged_vals, positive_val)
                 results.append(result)
             results_lol.append( (params_dict, results) )
-    return params, one_run_results, results_lol
+            param_predictions[param_val] = predictions
+    return params, one_run_results, results_lol, param_predictions
 
 def run_alg(algorithm, train, test, dataset, all_sensitive_attributes, single_sensitive,
             privileged_vals, positive_val):
