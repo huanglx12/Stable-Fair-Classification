@@ -65,17 +65,14 @@ def run(num_trials = NUM_TRIALS_DEFAULT, dataset = get_dataset_names(),
                                      dataset_obj, processed_dataset.get_sensitive_values(k), k))
                           for k in train_test_splits.keys())
 
-                param_val_metrics = defaultdict(list)
                 for i in range(0, num_trials):
                     for supported_tag in algorithm.get_supported_data_types():
                         train, test = train_test_splits[supported_tag][i]
                         extra_test = extra_tests[supported_tag]
                         try:
-                            params, results, param_results, param_val_metric =  \
+                            params, results, param_results =  \
                                 run_eval_alg(algorithm, train, extra_test, dataset_obj, processed_dataset,
                                              all_sensitive_attributes, sensitive, supported_tag)
-                            for tp_param_val, tp_metric in param_val_metric.items():
-                                param_val_metrics[tp_param_val] += [tp_metric]
                         except Exception as e:
                             import traceback
                             traceback.print_exc(file=sys.stderr)
@@ -87,15 +84,6 @@ def run(num_trials = NUM_TRIALS_DEFAULT, dataset = get_dataset_names(),
                                 for params, results in param_results:
                                     write_alg_results(param_files[supported_tag],
                                                       algorithm.get_name(), params, i, results)
-                best_metric = None
-                best_param_val = None
-                for tp_param_val, metric_list in param_val_metrics.items():
-                    avg_metric = np.average(metric_list)
-                    print("show show:", tp_param_val, avg_metric, metric_list)
-                    if best_metric is None or best_metric < avg_metric:
-                        best_metric = avg_metric
-                        best_param_val = tp_param_val
-                print("best_param_val:", best_param_val)
 
             print("Results written to:")
             for supported_tag in algorithm.get_supported_data_types():
@@ -144,8 +132,6 @@ def run_eval_alg(algorithm, train, test, dataset, processed_data, all_sensitive_
 
     # handling the set of predictions returned by ParamGridSearch
     results_lol = []
-    param_val_metric = {}
-    chosen_metric = Accuracy()
     if len(predictions_list) > 0:
         for param_name, param_val, predictions in predictions_list:
             params_dict = { param_name : param_val }
@@ -154,10 +140,8 @@ def run_eval_alg(algorithm, train, test, dataset, processed_data, all_sensitive_
                 result = metric.calc(actual, predictions, dict_sensitive_lists, single_sensitive,
                                      privileged_vals, positive_val)
                 results.append(result)
-            param_val_metric[param_val] = chosen_metric.calc(actual, predictions, dict_sensitive_lists, single_sensitive,
-                                                             privileged_vals, positive_val)
             results_lol.append( (params_dict, results) )
-    return params, one_run_results, results_lol, param_val_metric
+    return params, one_run_results, results_lol
 
 def run_alg(algorithm, train, test, dataset, all_sensitive_attributes, single_sensitive,
             privileged_vals, positive_val):
