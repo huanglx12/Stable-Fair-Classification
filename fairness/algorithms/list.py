@@ -8,6 +8,7 @@ from fairness.algorithms.baseline.GaussianNB import GaussianNB
 from fairness.algorithms.baseline.LogisticRegression import LogisticRegression
 from fairness.algorithms.ParamGridSearch import ParamGridSearch
 from fairness.algorithms.Ben.SDBSVM import SDBSVM
+from fairness.algorithms.GoelReg.GoelRegAlgorithm import GoelRegAlgorithmFairness
 
 from fairness.metrics.DIAvgAll import DIAvgAll
 from fairness.metrics.Accuracy import Accuracy
@@ -29,5 +30,6 @@ ALGORITHMS = [
    ParamGridSearch(FeldmanAlgorithm(SVM()), DIAvgAll()),          # Feldman params
    ParamGridSearch(FeldmanAlgorithm(SVM()), Accuracy()),
    ParamGridSearch(FeldmanAlgorithm(GaussianNB()), DIAvgAll()),
-   ParamGridSearch(FeldmanAlgorithm(GaussianNB()), Accuracy())
+   ParamGridSearch(FeldmanAlgorithm(GaussianNB()), Accuracy()),
+   ParamGridSearch(GoelRegAlgorithmFairness(), Accuracy())
 ]

@@ -15,21 +15,17 @@ np.random.seed(SEED)
 
 def check_data_file(fname):
     files = os.listdir(".") # get the current directory listing
-    print "Looking for file '%s' in the current directory..." % fname
 
     if fname not in files:
-        print "'%s' not found! Downloading from UCI Archive..." % fname
         addr = "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/%s" % fname
         response = urllib2.urlopen(addr)
         data = response.read()
         fileOut = open(fname, "w")
         fileOut.write(data)
         fileOut.close()
-        print "'%s' download and saved locally.." % fname
     else:
-        print "File found in current directory.."
-    
-    print
+        print("File found in current directory..")
+
     return
 
         
@@ -153,7 +149,6 @@ def load_adult_data(load_data_size=None):
 
     # see if we need to subsample the data
     if load_data_size is not None:
-        print "Loading only %d examples from the data" % load_data_size
         X = X[:load_data_size]
         y = y[:load_data_size]
         for k in x_control.keys():
