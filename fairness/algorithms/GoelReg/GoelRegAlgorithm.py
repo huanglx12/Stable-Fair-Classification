@@ -78,7 +78,7 @@ class GoelRegAlgorithmFairness(GoelRegAlgorithmBase):
 
     # take 10 logarithmic steps for gamma between 0.1 and 1.0
     def get_param_info(self):
-        return {'l2_const': [0, 0.01, 0.02, 0.03, 50, 100, 150, 200]}
+        return {'l2_const': [0, 0.01, 50]}
 
     def get_default_params(self):
         return {'l2_const': 1}

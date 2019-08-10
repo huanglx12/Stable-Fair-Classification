@@ -61,6 +61,9 @@ def load_json(filename):
 def main(train_file, test_file, output_file, setting, value):
     x_train, y_train, x_control_train = load_json(train_file)
     x_test, y_test, x_control_test = load_json(test_file)
+    print("len x_test:", len(x_test))
+    print("len y_test:", len(y_test), sum(y_test))
+    print("len x_control_test:", len(x_control_test))
 
     # X = ut.add_intercept(X) # add intercept to X before applying the linear classifier
     x_train = ut.add_intercept(x_train)

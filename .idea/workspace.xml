@@ -2,21 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c515d2-d21e-4423-8b47-697c8b42fd5c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_race-sex_categorical-binsensitive.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_race-sex_numerical-binsensitive.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_race-sex_numerical.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_race-sex_original.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_race_categorical-binsensitive.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_race_numerical-binsensitive.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_race_numerical.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_race_original.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_sex_categorical-binsensitive.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_sex_numerical-binsensitive.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_sex_numerical.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fairness/results/adult_sex_original.csv" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/algorithms/GoelReg/GoelRegAlgorithm.py" afterPath="$PROJECT_DIR$/fairness/algorithms/GoelReg/GoelRegAlgorithm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/algorithms/GoelReg/fair_classification/loss_funcs.py" afterPath="$PROJECT_DIR$/fairness/algorithms/GoelReg/fair_classification/loss_funcs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/algorithms/GoelReg/run-classifier/main.py" afterPath="$PROJECT_DIR$/fairness/algorithms/GoelReg/run-classifier/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/algorithms/list.py" afterPath="$PROJECT_DIR$/fairness/algorithms/list.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/benchmark.py" afterPath="$PROJECT_DIR$/fairness/benchmark.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/data/objects/list.py" afterPath="$PROJECT_DIR$/fairness/data/objects/list.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_race-sex_categorical-binsensitive.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_race-sex_categorical-binsensitive.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_race-sex_numerical-binsensitive.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_race-sex_numerical-binsensitive.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_race-sex_numerical.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_race-sex_numerical.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_race-sex_original.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_race-sex_original.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_race_categorical-binsensitive.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_race_categorical-binsensitive.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_race_numerical-binsensitive.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_race_numerical-binsensitive.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_race_numerical.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_race_numerical.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_race_original.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_race_original.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_sex_categorical-binsensitive.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_sex_categorical-binsensitive.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_sex_numerical-binsensitive.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_sex_numerical-binsensitive.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_sex_numerical.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_sex_numerical.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fairness/results/adult_sex_original.csv" afterPath="$PROJECT_DIR$/fairness/results/adult_sex_original.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,21 +38,19 @@
       <file leaf-file-name="benchmark.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fairness/benchmark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+            <state relative-caret-position="-729">
+              <caret line="158" column="0" lean-forward="true" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fairness/algorithms/list.py">
+      <file leaf-file-name="GoelRegAlgorithm.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/GoelRegAlgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#123#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="96">
+              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,55 +58,11 @@
       <file leaf-file-name="list.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fairness/data/objects/list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="300">
+              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
-                <marker date="1547715588000" expanded="true" signature="1422:1455" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Adult.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fairness/data/objects/Adult.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoelRegFairness-accuracy_adult_race_numerical-binsensitive.csv" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fairness/results/GoelRegFairness-accuracy_adult_race_numerical-binsensitive.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="110" lean-forward="true" selection-start-line="6" selection-start-column="110" selection-end-line="6" selection-end-column="110" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoelRegAlgorithm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/GoelRegAlgorithm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="75" column="43" lean-forward="true" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/disparate_impact/run-classifier/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-754">
-              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1547725248000" expanded="true" signature="1422:1455" ph="..." />
               </folding>
             </state>
           </provider>
@@ -129,10 +87,10 @@
       <find>out_f</find>
       <find>f_out</find>
       <find>sensitive_attrs</find>
-      <find>print</find>
       <find>multiprocess</find>
       <find>Queue</find>
       <find>Process</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,24 +111,23 @@
         <option value="$PROJECT_DIR$/fairness/algorithms/GeolReg/__init__.py" />
         <option value="$PROJECT_DIR$/fairness/algorithms/GeolReg/GoelRegAlgorithm.py" />
         <option value="$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/disparate_impact/run-classifier/main.py" />
-        <option value="$PROJECT_DIR$/fairness/algorithms/GoelReg/fair_classification/loss_funcs.py" />
         <option value="$PROJECT_DIR$/fairness/algorithms/GoelReg/run_classifier/main.py" />
         <option value="$PROJECT_DIR$/fairness/algorithms/ParamGridSearch.py" />
-        <option value="$PROJECT_DIR$/fairness/algorithms/GoelReg/run-classifier/main.py" />
-        <option value="$PROJECT_DIR$/fairness/benchmark.py" />
-        <option value="$PROJECT_DIR$/fairness/data/objects/Adult.py" />
         <option value="$PROJECT_DIR$/fairness/algorithms/GoelReg/fair_classification/utils.py" />
-        <option value="$PROJECT_DIR$/fairness/algorithms/list.py" />
-        <option value="$PROJECT_DIR$/fairness/algorithms/GoelReg/GoelRegAlgorithm.py" />
         <option value="$PROJECT_DIR$/fairness/data/objects/list.py" />
+        <option value="$PROJECT_DIR$/fairness/algorithms/list.py" />
+        <option value="$PROJECT_DIR$/fairness/algorithms/GoelReg/fair_classification/loss_funcs.py" />
+        <option value="$PROJECT_DIR$/fairness/data/objects/Adult.py" />
+        <option value="$PROJECT_DIR$/fairness/algorithms/GoelReg/GoelRegAlgorithm.py" />
+        <option value="$PROJECT_DIR$/fairness/benchmark.py" />
+        <option value="$PROJECT_DIR$/fairness/algorithms/GoelReg/run-classifier/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-511" />
-    <option name="y" value="-1417" />
-    <option name="width" value="1636" />
-    <option name="height" value="1417" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -187,7 +144,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -229,12 +185,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="results" />
+              <option name="myItemId" value="algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,16 +348,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-511" y="-1417" width="1636" height="1417" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28049535" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27561557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3554717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29584906" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5769854" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -440,55 +397,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fairness/metrics/Accuracy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/metrics/Metric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/metrics/list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/data/objects/TwoGaussians.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="58" lean-forward="true" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/data/objects/PropublicaViolentRecidivism.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/disparate_impact/run-classifier/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="118" column="78" lean-forward="true" selection-start-line="115" selection-start-column="8" selection-end-line="118" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/disparate_impact/run-classifier/loss_funcs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fairness/algorithms/baseline/Generic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -528,7 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="175" column="6" lean-forward="false" selection-start-line="175" selection-start-column="6" selection-end-line="175" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -543,7 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="226" column="14" lean-forward="false" selection-start-line="226" selection-start-column="14" selection-end-line="226" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -551,9 +457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="127" column="42" lean-forward="true" selection-start-line="127" selection-start-column="42" selection-end-line="127" selection-end-column="42" />
-          <folding>
-            <element signature="e#1812#1822#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,9 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-463">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1539#1549#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -579,9 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#13#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -589,7 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,33 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#13#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/fair_classification/loss_funcs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/kamishima/KamishimaAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="46" column="10" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/fair_classification/loss_funcs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="124" column="30" lean-forward="true" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,22 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding>
-            <marker date="1547714128000" expanded="true" signature="99:3742" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="536:2099" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="999:1796" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="1013:1156" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="1212:1796" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="1295:1677" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="2271:3245" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="2309:2430" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="2765:3164" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="3008:3164" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="3309:3425" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="3466:3523" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="3572:3742" ph="..." />
-            <marker date="1547714128000" expanded="true" signature="3581:3677" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,7 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="554">
           <caret line="206" column="57" lean-forward="false" selection-start-line="206" selection-start-column="57" selection-end-line="206" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -662,35 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/results/adult_race_numerical-binsensitive.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/fair_classification/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="364" column="56" lean-forward="true" selection-start-line="364" selection-start-column="56" selection-end-line="364" selection-end-column="56" />
-          <folding>
-            <element signature="e#76#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/run-classifier/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#14#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -698,33 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="43" column="49" lean-forward="false" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/ZafarAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="118" column="39" lean-forward="false" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.5/site-packages/Orange/widgets/visualize/owmap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="847" column="8" lean-forward="false" selection-start-line="847" selection-start-column="8" selection-end-line="847" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/fair_classification/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-735">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -732,7 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -740,53 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="114" column="14" lean-forward="false" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/data/objects/Data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="83" column="16" lean-forward="false" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/data/raw/adult.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/disparate_impact/run-classifier/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-754">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/GoelRegAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="75" column="43" lean-forward="true" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -794,7 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,7 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,18 +556,140 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.5/site-packages/Orange/widgets/visualize/owmap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="847" column="8" lean-forward="false" selection-start-line="847" selection-start-column="8" selection-end-line="847" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/fair_classification/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/fair_classification/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="261" column="12" lean-forward="true" selection-start-line="261" selection-start-column="12" selection-end-line="261" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/data/preprocessed/adult_categorical-binsensitive.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/data/preprocessed/adult_processed.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/data/preprocessed/adult_original.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/data/objects/Data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/data/raw/adult.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/data/preprocessed/adult_numerical-binsensitive.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="88" lean-forward="false" selection-start-line="0" selection-start-column="88" selection-end-line="0" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/disparate_impact/run-classifier/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/data/objects/Adult.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/data/objects/list.py">
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/run-classifier/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-            <marker date="1547715588000" expanded="true" signature="1422:1455" ph="..." />
-          </folding>
+        <state relative-caret-position="169">
+          <caret line="65" column="52" lean-forward="false" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/fair-classification-master/fair_classification/loss_funcs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/results/adult_race-sex_numerical-binsensitive.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own-metric_adult_GoelRegFairness-accuracy_numerical-binsensitive.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/results/adult_race_numerical-binsensitive.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/results/adult_sex_numerical-binsensitive.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/results/GoelRegFairness-accuracy_adult_race-sex_numerical-binsensitive.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -829,46 +697,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/own-metric_adult_GoelRegFairness-accuracy_numerical-binsensitive.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/results/GoelRegFairness-accuracy_adult_race-sex_numerical-binsensitive.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/benchmark.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fairness/data/objects/Adult.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fairness/results/GoelRegFairness-accuracy_adult_race_numerical-binsensitive.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="110" lean-forward="true" selection-start-line="6" selection-start-column="110" selection-end-line="6" selection-end-column="110" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/fair_classification/loss_funcs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="129" column="85" lean-forward="false" selection-start-line="129" selection-start-column="85" selection-end-line="129" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="33" column="58" lean-forward="false" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/kamishima/KamishimaAlgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/zafar/ZafarAlgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="113" column="62" lean-forward="false" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/data/objects/list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+            <marker date="1547725248000" expanded="true" signature="1422:1455" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/benchmark.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret line="158" column="0" lean-forward="true" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fairness/algorithms/GoelReg/GoelRegAlgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
         </state>
       </provider>

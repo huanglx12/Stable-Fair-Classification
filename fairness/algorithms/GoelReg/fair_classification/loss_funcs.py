@@ -148,7 +148,7 @@ def _fair_logistic_loss_l2(w, X, y, x_control, lam, i, fold_num, reg0, reg1, l2_
 
     yz = y * np.dot(X, w)
     # Logistic loss is the negative of the log of the logistic function.
-    logistic_loss = -np.sum(log_logistic(yz)) / len(yz)
+    logistic_loss = -np.sum(log_logistic(yz))
     # Fariness Regularizer is defined by sum of log fairness
     fair_reg = lam * _fair_reg(w, X, y, x_control, i, fold_num, reg0, reg1)
 

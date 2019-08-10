@@ -16,7 +16,7 @@ import numpy as np
 
 from fairness.algorithms.ParamGridSearch import ParamGridSearch
 
-NUM_TRIALS_DEFAULT = 3
+NUM_TRIALS_DEFAULT = 2
 
 def get_algorithm_names():
     result = [algorithm.get_name() for algorithm in ALGORITHMS]
@@ -144,10 +144,13 @@ def run_eval_alg(algorithm, train, test, dataset, processed_data, all_sensitive_
     # get the actual classifications and sensitive attributes
     actual = test[dataset.get_class_attribute()].values.tolist()
     sensitive = test[single_sensitive].values.tolist()
+    print("len actual, sum:", len(actual), sum(actual))
+    print("len sensitive, sum:", len(sensitive), sum(sensitive))
 
     predicted, params, predictions_list =  \
         run_alg(algorithm, train, test, dataset, all_sensitive_attributes, single_sensitive,
                 privileged_vals, positive_val)
+    print("len predicted, sum:", len(predicted), sum(predicted))
 
     # make dictionary mapping sensitive names to sensitive attr test data lists
     dict_sensitive_lists = {}
