@@ -354,7 +354,7 @@ class LRwPRObjetiveType4Mixin(LRwPR):
         # l2 regularizer
         reg = np.sum(coef * coef)
 
-        l = -l + self.eta * f + 0.5 * self.C * reg
+        l = -l + self.eta * f + self.C * reg * len(y)
 #        print >> sys.stderr, l
         return l
 
@@ -436,7 +436,7 @@ class LRwPRObjetiveType4Mixin(LRwPR):
         reg = coef
 
         # sum
-        l[:, :] = -l + self.eta * f + self.C * reg
+        l[:, :] = -l + self.eta * f + self.C * reg * len(y)
 #        print >> sys.stderr, "l =", l
 
         return l_

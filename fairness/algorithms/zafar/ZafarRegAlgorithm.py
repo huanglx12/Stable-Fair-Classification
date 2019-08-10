@@ -7,8 +7,8 @@ import json
 import sys
 import numpy
 
+class ZafarAlgorithmBase(Algorithm):
 
-class GoelRegAlgorithmBase(Algorithm):
     def __init__(self):
         Algorithm.__init__(self)
 
@@ -22,7 +22,7 @@ class GoelRegAlgorithmBase(Algorithm):
         if type(value_0) == str:
             class_type = str
         else:
-            class_type = type(value_0.item())  # this should be numpy.int64 or numpy.int32,
+            class_type = type(value_0.item()) # this should be numpy.int64 or numpy.int32,
 
         def create_file(df):
             out = {}
@@ -47,7 +47,7 @@ class GoelRegAlgorithmBase(Algorithm):
         cmd = self.create_command_line(train_name, test_name, predictions_name, params)
         BASE_DIR = os.path.dirname(__file__)
         result = subprocess.run(cmd,
-                                cwd=BASE_DIR + '/run-classifier/')
+            cwd = BASE_DIR + '/fair-classification-master/disparate_impact/run-classifier/')
         os.unlink(train_name)
         os.unlink(test_name)
         if result.returncode != 0:
@@ -67,17 +67,18 @@ class GoelRegAlgorithmBase(Algorithm):
             # print("ground truth: %s" % test_df[class_attr].as_matrix().tolist())
             return predictions_correct, []
 
-
 ##############################################################################
 
 
-class GoelRegAlgorithmFairness(GoelRegAlgorithmBase):
-    def __init__(self):
-        GoelRegAlgorithmBase.__init__(self)
-        self.name = "GoelRegFairness"
+class ZafarRegAlgorithm(ZafarAlgorithmBase):
 
+    def __init__(self):
+        ZafarAlgorithmBase.__init__(self)
+        self.name = "ZafarFairness"
+        
+    # take 10 logarithmic steps for gamma between 0.1 and 1.0
     def get_param_info(self):
-        return {'lam': [0, 0.01, 50]}
+        return {'lam': list(numpy.exp(numpy.linspace(numpy.log(1), numpy.log(10000), 10)))}
 
     def get_default_params(self):
         return {'lam': 1}

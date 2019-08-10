@@ -97,7 +97,7 @@ def _logistic_loss_l2_reg(w, X, y, lam=1, return_arr=False):  # used with accura
     # Logistic loss is the negative of the log of the logistic function.
     _array = log_logistic(yz)
     logistic_loss = -np.sum(log_logistic(yz)) / len(yz)
-    l2_reg = (float(lam) / 2.0) * np.sum([elem * elem for elem in w])
+    l2_reg = (float(lam) * len(y)) * np.sum([elem * elem for elem in w])
 
     # print "logistic loss = {}".format(logistic_loss)
     # print "l2_reg = {}".format(l2_reg)
@@ -153,7 +153,7 @@ def _fair_logistic_loss_l2(w, X, y, x_control, lam, i, fold_num, reg0, reg1, l2_
     fair_reg = lam * _fair_reg(w, X, y, x_control, i, fold_num, reg0, reg1)
 
     '''' Enabled the l2 regularizer '''
-    l2_reg = (float(l2_const) / 2) * np.sum([elem * elem for elem in w])
+    l2_reg = (float(l2_const)*len(y)) * np.sum([elem * elem for elem in w])
 
     # count_reg = float(np.sum([1 for i in np.sign(np.dot(X, w)) if i == 1])) / len(yz)
 
@@ -188,7 +188,7 @@ def _fair_logistic_loss_multiv_race_l2(w, X, y, xx_control, lam, i, fold_num,
     fair_reg = lam * _SoL_term
 
     '''' Enabled the l2 regularizer '''
-    l2_reg = (float(l2_reg_const) / 2) * np.sum([elem * elem for elem in w])
+    l2_reg = (float(l2_reg_const) * len(y)) * np.sum([elem * elem for elem in w])
 
     # count_reg = float(np.sum([1 for i in np.sign(np.dot(X, w)) if i == 1]))/len(yz)
 

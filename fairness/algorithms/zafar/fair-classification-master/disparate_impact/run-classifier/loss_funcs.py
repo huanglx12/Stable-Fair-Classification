@@ -51,7 +51,7 @@ def _logistic_loss_l2_reg(w, X, y, lam=None):
 	yz = y * np.dot(X,w)
 	# Logistic loss is the negative of the log of the logistic function.
 	logistic_loss = -np.sum(log_logistic(yz))
-	l2_reg = (float(lam)/2.0) * np.sum([elem*elem for elem in w])
+	l2_reg = (float(lam)*len(y)) * np.sum([elem*elem for elem in w])
 	out = logistic_loss + l2_reg
 	return out
 

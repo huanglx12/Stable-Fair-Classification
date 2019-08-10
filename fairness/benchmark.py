@@ -16,7 +16,7 @@ import numpy as np
 
 from fairness.algorithms.ParamGridSearch import ParamGridSearch
 
-NUM_TRIALS_DEFAULT = 2
+NUM_TRIALS_DEFAULT = 1
 
 def get_algorithm_names():
     result = [algorithm.get_name() for algorithm in ALGORITHMS]
@@ -93,7 +93,7 @@ def run(num_trials = NUM_TRIALS_DEFAULT, dataset = get_dataset_names(),
                                     write_alg_results(param_files[supported_tag],
                                                       algorithm.get_name(), params, i, results)
 
-                write_own_metric(dataset_obj, algorithm, param_10_predictions)
+                # write_own_metric(dataset_obj, algorithm, param_10_predictions)
 
             print("Results written to:")
             for supported_tag in algorithm.get_supported_data_types():

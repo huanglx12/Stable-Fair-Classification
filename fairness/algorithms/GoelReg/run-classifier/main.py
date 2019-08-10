@@ -18,7 +18,7 @@ def train_classifier(x, y, control, sensitive_attrs, mode, sensitive_attrs_to_co
         sensitive_attrs,
         sensitive_attrs_to_cov_thresh,
         mode.get('gamma', 1),
-        mode.get('l2_const', None),
+        mode.get('lam', None),
         mode.get('is_reg', 0)
     )
     return w
@@ -74,10 +74,10 @@ def main(train_file, test_file, output_file, setting, value):
     # print >> sys.stderr, "First row:"
     # print >> sys.stderr, x_train[0,:], y_train[0], x_control_train
 
-    if setting == 'l2_const':
-        mode = {"fairness": 2, "l2_const": float(value), 'is_reg': 1}
+    if setting == 'lam':
+        mode = {"fairness": 2, "lam": float(value), 'is_reg': 1}
     elif setting == 'baseline':
-        mode = {"fairness": 2, "l2_const": 1}
+        mode = {"fairness": 2, "lam": 1}
     else:
         raise Exception("Don't know how to handle setting %s" % setting)
 

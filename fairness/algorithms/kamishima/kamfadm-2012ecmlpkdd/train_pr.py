@@ -269,7 +269,7 @@ if __name__ == '__main__':
     # script specific options
     ap.add_argument('-C', '--reg', dest='C', type=float, default=1.0)
     ap.set_defaults(ns=False)
-    ap.add_argument('-e', '--eta', type=float, default=1.0)
+    ap.add_argument('-e', '--eta', type=float, default=2.0)
     ap.add_argument('-l', '--ltype', type=int, default=4)
     ap.add_argument('-n', '--itype', type=int, default=3)
     ap.set_defaults(ns=False)
